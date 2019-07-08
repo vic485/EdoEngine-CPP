@@ -44,6 +44,18 @@ namespace Edo {
         typedef unsigned short utf16; // Not implemented in CEGUI, Custom UTF16 implementation later
         typedef unsigned int utf32;
 
+        struct EdoByteOrderMark {
+            static std::string Utf8() { return "\xEF\xBB\xBF"; }
+
+            static std::string Utf16LE() { return "\xFF\xFE"; }
+
+            static std::string Utf16BE() { return "\xFE\xFF"; }
+
+            static std::string Utf32LE() { return std::string("\xFF\xFE\x00\x00", 4); }
+
+            static std::string Utf32BE() { return std::string("\x00\x00\xFE\xFF", 4); }
+        };
+
 #define STR_QUICKBUFF_SIZE 32
 
         /*!

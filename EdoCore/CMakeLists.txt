@@ -9,4 +9,4 @@ include_directories(src)
 add_compile_definitions(_EDO_WINDOWS)
 add_compile_definitions(_EXPORT_DLL)
 
-add_library(EdoCore SHARED src/Edo.h src/EdoBase.h src/Types/EdoString.cpp src/Types/EdoString.h)
+add_library(EdoCore SHARED src/Edo.h src/EdoBase.h src/Types/EdoString.cpp src/Types/EdoString.h src/Utils/EdoTextLog.cpp src/Utils/EdoTextLog.h)
