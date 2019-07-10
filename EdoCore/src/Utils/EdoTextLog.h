@@ -8,8 +8,8 @@
 #ifndef EDOCORE_EDOTEXTLOG_H
 #define EDOCORE_EDOTEXTLOG_H
 
+#include "../Edo.h"
 #include "../Types/EdoString.h"
-#include <iostream>
 
 namespace Edo {
     namespace Utils {
@@ -153,4 +153,4 @@ namespace Edo {
     }
 }
 
-#endif //EDOCORE_EDOTEXTLOG_H
+#endif // EDOCORE_EDOTEXTLOG_H

@@ -6,11 +6,6 @@
 // =============================================================================
 
 #include "EdoTextLog.h"
-#include <fstream>
-
-// TODO: move this
-#define TEXT(x) __TEXT(x)
-#define __TEXT(x) L##x
 
 using namespace Edo::Types;
 using namespace Edo::Utils;
@@ -98,7 +93,7 @@ void EdoTextLog::Write(const Edo::Types::EdoString &logString, const Edo::Types:
         msg += GetDateTimeString() + TEXT(" ");
     }
 
-    msg += TEXT("[") + type + TEXT("] ") + logMessage + TEXT(" >> ") + file + TEXT(":") + line;
+    msg += TEXT("[") + type + TEXT("] ") + logMessage + TEXT(" >> ") + file + TEXT(":") + ToString(line);
 
     if (ss.is_open()) {
         ss << msg << std::endl; // Write to .txt file

@@ -9,6 +9,8 @@
 #define EDOCORE_EDO_H
 
 // TODO: Store type includes in their own header?
+#include "EdoIncludes.h"
+#include "EdoMacros.h"
 #include "Types/EdoString.h"
 
 ///// Main Entry Point /////

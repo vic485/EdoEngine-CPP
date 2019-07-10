@@ -4624,6 +4624,13 @@ namespace Edo {
                 return (la < lb);
             }
         };
+
+        template<class C>
+        inline EdoString ToString(const C &i) {
+            std::ostringstream converter;
+            converter << i;
+            return EdoString((utf8 *) converter.str().c_str());
+        }
     } // Namespace Types
 } // Namespace Edo
 
